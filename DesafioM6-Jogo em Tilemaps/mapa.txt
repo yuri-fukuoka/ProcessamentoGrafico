@@ -1,0 +1,36 @@
+# Dungeon Escape - mapa da fase
+#
+# Cada caractere da seção [mapa] é um tile de 16x16 do Kenney Tiny Dungeon.
+# O desenho das paredes (topo com borda, face de tijolos) e as sombras do chão
+# são escolhidos automaticamente a partir dos vizinhos (autotile).
+#
+#   #  parede                .  chão                 ^  espinhos (sobem e descem)
+#   T  face da parede com tocha    G  face com grade    E  porta de saída
+#   P  início do jogador     C  baú com a chave      p  poção (+1 vida)
+#   +  cruz    x  lápide    t  mesa    s  banquinho    a  bigorna    b  barril
+#
+# Na seção [inimigos], cada linha é:  tipo modo velocidade(tiles/s) x y [x y ...]
+#   tipos: rato, morcego
+#   modos: vaivem (vai e volta pelos pontos), circuito (repete os pontos em loop)
+
+[mapa]
+######################
+####T##E######T##G####
+##+.......####......##
+##........####..x...##
+##.p......####....C.##
+##..####..####..######
+##..####..####..######
+##..^^..^^....^^^^..##
+##..................##
+##....^^..^^..^^....##
+################..####
+################..####
+##P..t.............a##
+##.b...........s..p.##
+######################
+
+[inimigos]
+rato     circuito 3.0  7 12  14 12  14 13  7 13
+morcego  circuito 3.2  3 2  9 2  9 4  3 4
+morcego  circuito 2.6  8 3  5 4  3 3  6 2

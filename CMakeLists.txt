@@ -36,6 +36,18 @@ add_executable(M4_Texturas "DesafioM4-Mapeamento de Texturas/main.cpp")
 target_link_libraries(M4_Texturas PRIVATE glad glfw glm::glm)
 target_compile_definitions(M4_Texturas PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/")
 
+# Desafio M5 - Navegacao em Camadas (Tappy Plane com parallax)
+add_executable(M5_Camadas "DesafioM5-Navegacao em Camadas/main.cpp")
+target_link_libraries(M5_Camadas PRIVATE glad glfw glm::glm)
+target_compile_definitions(M5_Camadas PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/kenney_tappy-plane/PNG/")
+
+# Desafio M6 - Jogo em Tilemaps (Dungeon Escape)
+add_executable(M6_Dungeon "DesafioM6-Jogo em Tilemaps/main.cpp")
+target_link_libraries(M6_Dungeon PRIVATE glad glfw glm::glm)
+target_compile_definitions(M6_Dungeon PRIVATE
+    ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/kenney_tinyDungeon/"
+    MAPA_ARQUIVO="${CMAKE_SOURCE_DIR}/DesafioM6-Jogo em Tilemaps/mapa.txt")
+
 # Atividade Vivencial 1 - Triangulos com clique do mouse
 add_executable(Vivencial1 "Vivencial1/main.cpp")
 target_link_libraries(Vivencial1 PRIVATE glad glfw glm::glm)
