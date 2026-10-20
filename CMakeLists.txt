@@ -31,6 +31,11 @@ target_link_libraries(M2_Parte2 PRIVATE glad glfw glm::glm)
 add_executable(JogoDasCores "DesafioM3-Jogo das Cores/main.cpp")
 target_link_libraries(JogoDasCores PRIVATE glad glfw glm::glm)
 
+# Desafio M4 - Mapeamento de Texturas
+add_executable(M4_Texturas "DesafioM4-Mapeamento de Texturas/main.cpp")
+target_link_libraries(M4_Texturas PRIVATE glad glfw glm::glm)
+target_compile_definitions(M4_Texturas PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/")
+
 # Atividade Vivencial 1 - Triangulos com clique do mouse
 add_executable(Vivencial1 "Vivencial1/main.cpp")
 target_link_libraries(Vivencial1 PRIVATE glad glfw glm::glm)
