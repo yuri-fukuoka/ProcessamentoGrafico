@@ -2,3 +2,9 @@ build/
 *.o
 *.a
 *.so
+# Pacote original do Unity (140 MB, acima do limite do GitHub); as camadas usadas estão em assets/space_gas_giant/
+assets/Parallax Space Background Multipack 2.2/
+# Arquivos vetoriais/editores do pack da Craftpix (não usados; só os PNG)
+assets/craftpix-781145-free-space-shooter-game-objects/AI/
+assets/craftpix-781145-free-space-shooter-game-objects/EPS/
+assets/craftpix-781145-free-space-shooter-game-objects/SCML/

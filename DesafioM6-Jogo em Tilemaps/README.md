@@ -1,5 +1,7 @@
 # Desafio M6 - Jogo em Tilemaps: Dungeon Escape
 
+**Integrante:** Yuri Fukuoka de Oliveira
+
 Jogo 2D em OpenGL 3.3 com visão de cima (top-down). O cenário é um **tilemap** lido de um arquivo texto e desenhado com o tileset [Kenney - Tiny Dungeon](https://kenney.nl/assets/tiny-dungeon) (CC0, tiles de 16x16 desenhados na tela em 3x).
 
 O cavaleiro está preso numa masmorra. Para escapar, ele precisa **abrir o baú que guarda a chave** e depois **sair pela porta**, desviando de monstros e espinhos, antes que o tempo acabe.

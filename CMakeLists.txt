@@ -51,3 +51,8 @@ target_compile_definitions(M6_Dungeon PRIVATE
 # Atividade Vivencial 1 - Triangulos com clique do mouse
 add_executable(Vivencial1 "Vivencial1/main.cpp")
 target_link_libraries(Vivencial1 PRIVATE glad glfw glm::glm)
+
+# Atividade Vivencial 2 - Parallax Scrolling (foguete no espaço)
+add_executable(Vivencial2 "Vivencial2/main.cpp")
+target_link_libraries(Vivencial2 PRIVATE glad glfw glm::glm)
+target_compile_definitions(Vivencial2 PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/")

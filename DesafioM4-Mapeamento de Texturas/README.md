@@ -1,5 +1,7 @@
 # Desafio M4 - Mapeamento de Texturas
 
+**Integrante:** Yuri Fukuoka de Oliveira
+
 Aplicação OpenGL 3.3 que desenha uma textura de fundo (terra) em um retângulo do tamanho da janela e permite colar **adesivos** (frutas em PNG com transparência) por cima. Os adesivos podem ser movidos, girados, escalados e espelhados, e cada objeto pode receber um filtro de imagem.
 
 ## Como compilar e executar

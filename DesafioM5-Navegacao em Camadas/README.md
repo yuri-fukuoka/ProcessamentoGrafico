@@ -1,5 +1,7 @@
 # Desafio M5 - Navegação em Camadas
 
+**Integrante:** Yuri Fukuoka de Oliveira
+
 Cena de jogo 2D em OpenGL 3.3 no estilo *Flappy Bird*: um avião voa por um cenário com **parallax** de várias camadas, desviando de rochas, coletando estrelas e colidindo com o relevo do chão. Assets: [Kenney - Tappy Plane](https://kenney.nl/assets/tappy-plane) (CC0).
 
 ## Como compilar e executar
