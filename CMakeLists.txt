@@ -21,6 +21,16 @@ FetchContent_MakeAvailable(glfw glm)
 add_library(glad STATIC common/glad.c)
 target_include_directories(glad PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
+# Desafio M2 - Triangulos
+add_executable(M2_Parte1 "DesafioM2-Triangulos/Parte1.cpp")
+target_link_libraries(M2_Parte1 PRIVATE glad glfw)
+add_executable(M2_Parte2 "DesafioM2-Triangulos/Parte2.cpp")
+target_link_libraries(M2_Parte2 PRIVATE glad glfw glm::glm)
+
 # Desafio M3 - Jogo das Cores
 add_executable(JogoDasCores "DesafioM3-Jogo das Cores/main.cpp")
 target_link_libraries(JogoDasCores PRIVATE glad glfw glm::glm)
+
+# Atividade Vivencial 1 - Triangulos com clique do mouse
+add_executable(Vivencial1 "Vivencial1/main.cpp")
+target_link_libraries(Vivencial1 PRIVATE glad glfw glm::glm)
