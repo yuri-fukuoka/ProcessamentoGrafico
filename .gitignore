@@ -8,3 +8,6 @@ assets/Parallax Space Background Multipack 2.2/
 assets/craftpix-781145-free-space-shooter-game-objects/AI/
 assets/craftpix-781145-free-space-shooter-game-objects/EPS/
 assets/craftpix-781145-free-space-shooter-game-objects/SCML/
+# Arquivos de sistema do macOS que vêm dentro de alguns zips
+__MACOSX/
+.DS_Store

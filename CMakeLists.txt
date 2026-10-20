@@ -48,6 +48,19 @@ target_compile_definitions(M6_Dungeon PRIVATE
     ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/kenney_tinyDungeon/"
     MAPA_ARQUIVO="${CMAKE_SOURCE_DIR}/DesafioM6-Jogo em Tilemaps/mapa.txt")
 
+# Grau B - Dungeon Escape Isométrico
+set(DUNGEON_0X72 "${CMAKE_SOURCE_DIR}/assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/")
+add_executable(GrauB_GerarTileset "GrauB/ferramentas/gerar_tileset.cpp")
+target_include_directories(GrauB_GerarTileset PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_compile_definitions(GrauB_GerarTileset PRIVATE
+    FRAMES_DIR="${DUNGEON_0X72}"
+    SAIDA_TILESET="${CMAKE_SOURCE_DIR}/GrauB/tilesetIso.png")
+add_executable(GrauB "GrauB/main.cpp")
+target_link_libraries(GrauB PRIVATE glad glfw glm::glm)
+target_compile_definitions(GrauB PRIVATE
+    FRAMES_DIR="${DUNGEON_0X72}"
+    GRAUB_DIR="${CMAKE_SOURCE_DIR}/GrauB/")
+
 # Atividade Vivencial 1 - Triangulos com clique do mouse
 add_executable(Vivencial1 "Vivencial1/main.cpp")
 target_link_libraries(Vivencial1 PRIVATE glad glfw glm::glm)

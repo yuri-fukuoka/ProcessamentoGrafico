@@ -1,0 +1,62 @@
+tilesetIso.png 17 32 32
+18 18
+13 14 14 13 15 13 13 13 14 13 13 13 13 13 15 13 13 13
+13  0  2  0  1  0  0  1  0 13  1  0  1  1  0  0  2 13
+13  3  0  5  0  0  0  0  1 13  0  0  7  7  2  1  0 13
+13  0  2  0  0  0  0  1  1 13  3  0  7  7  0  5  0 13
+13  0  0  0  4  4  0  0  3  0  0  0  0  0  0  1  0 13
+13  0  2  0  4  4  1  0  0 13  0  0  0  0  0  0  0 13
+13  0  0  0  0  1  0  0  0 13 13 13 13 13  0 13 13 13
+13 13 13 13  0 13 13 13 13 13  0  0  1  0  2  1  1 13
+13  0  2  3  0  0  1  0  0 13  0  0  4  4  4  0  0 13
+13  0  0  7  7  7  0  0  2 13  2  3  3  0  0  0  1 13
+13  0  0  0  0  0  0  0  0  1  0  0  0  0  0  5  0 13
+13  1  0  5  1  1  3  2  0 13  1  1  2  1  0  1  0 13
+13  0  2  0  0  0  2  0  0 13 13 13  0 13 13 13 13 13
+13 13 13  0 13 13 13 13  1  1  0  0  0  2  1  0  0 13
+13  2  0  1  0  0  0  0  0  0  2  0  7  7  7  0  0 13
+13  0 11  3  0  0  0  0  0 13  0  3  0  0  1  1  0 13
+13  0  0  0  0  0  0  0  0 13  3  3  2  3  5  0  0 13
+13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13
+
+# ------------------------------------------------------------------------------
+# As 3 primeiras partes seguem o formato do enunciado:
+#   <tileset> <número de tiles> <largura do tile> <altura do tile>
+#   <linhas> <colunas>
+#   matriz com o índice do tile em cada posição (linha 0 = fundo do mapa)
+#
+# Índices do tileset (gerado por GrauB/ferramentas/gerar_tileset.cpp):
+#    0-3 chão      4 buraco      5 placa levantada   6 placa abaixada
+#    7-10 espinhos (quadros da animação)   11 saída fechada   12 escada
+#   13 parede     14 parede com estandarte   15 parede com fonte   16 cursor
+#
+# Daqui para baixo vêm as regras e os objetos (linhas com # são comentários).
+# Coordenadas são sempre "linha coluna".
+# ------------------------------------------------------------------------------
+
+# Regras dos tiles
+caminhaveis 0 1 2 3 4 5 6 7 8 9 10 11 12
+perigosos   4 9 10              # buraco e espinhos levantados tiram 1 vida
+troca       5 6                 # ao pisar, a placa levantada (5) vira abaixada (6)
+saida       11 12               # moedas e placas completas: a saída (11) vira escada (12)
+vitoria     12                  # pisar na escada vence
+animacao    6  7 7 7 7 8 9 10 10 10 10 9 8   # quadros por segundo + sequência dos espinhos
+
+# Objetos: jogador, moedas e poções (+1 vida)
+jogador 1 1
+moeda 1 7
+moeda 3 16
+moeda 5 2
+moeda 8 16
+moeda 9 1
+moeda 11 12
+moeda 14 16
+moeda 16 6
+pocao 8 8
+pocao 13 9
+
+# Inimigos: inimigo <sprite do pack 0x72> <vaivem|circuito> <velocidade em tiles/s> <linha coluna> ...
+inimigo skelet      vaivem   2.0  10 1  10 16
+inimigo goblin      circuito 2.5  1 10  1 16  5 16  5 10
+inimigo imp         circuito 3.0  14 1  14 8  16 8  16 1
+inimigo tiny_zombie vaivem   1.5  7 10  7 16

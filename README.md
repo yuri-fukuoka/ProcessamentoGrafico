@@ -13,6 +13,7 @@ Trabalhos da disciplina de Processamento Gráfico, em C++ com OpenGL 3.3 (GLFW, 
 | [`DesafioM6-Jogo em Tilemaps`](DesafioM6-Jogo%20em%20Tilemaps/) | Dungeon Escape em tilemap | `M6_Dungeon` |
 | [`Vivencial1`](Vivencial1/) | Triângulos criados a partir de cliques do mouse | `Vivencial1` |
 | [`Vivencial2`](Vivencial2/) | Parallax scrolling com foguete controlado pelo teclado | `Vivencial2` |
+| [`GrauB`](GrauB/) | Dungeon Escape Isométrico (tilemap diamond, 8 direções) | `GrauB` (e `GrauB_GerarTileset`) |
 
 ## Como compilar
 
